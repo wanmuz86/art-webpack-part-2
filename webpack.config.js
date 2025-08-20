@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
  mode: 'development',
@@ -57,7 +57,8 @@ module.exports = {
      template: './public/another.html',
      filename: 'another.html',
      chunks: ['another'] // Additional entry point [eg: admin]
-   })
+   }),
+    new BundleAnalyzerPlugin() 
  ],
  // setup the code-splitting optimization 
  optimization: {
