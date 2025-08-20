@@ -8,7 +8,7 @@ module.exports = {
  // Codesplitting
  entry: {
     // First module, eg: Customer facing module
-   main: './src/index.tsx',
+   main: './src/main.tsx',
    // Another module. eg: Admin facing module
    another: './src/anotherEntry.tsx'
  },
